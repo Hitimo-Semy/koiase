@@ -12,7 +12,7 @@ function Page4() {
     >
       {/* Image of Roses */}
       <motion.img 
-        src="./roses.png" 
+        src="https://static.vecteezy.com/system/resources/previews/017/339/857/original/bunch-of-cute-romantic-valentine-red-roses-flowers-bouquet-cartoon-doodle-png.png" 
         alt="Bouquet of red roses" 
         className="roses-image"
         initial={{ opacity: 0, scale: 0.8 }} 
