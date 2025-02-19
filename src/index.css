@@ -1,110 +1,115 @@
-/* General Page Styling */
-.page {
+/* 🌎 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 🏠 FORCE FULL CENTERING FOR ALL PAGES */
+.page-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center; /* 🚨 FIX: Forces Vertical Center */
+  align-items: center;     /* 🚨 FIX: Forces Horizontal Center */
+  height: 100vh;           /* 🚨 FIX: Full screen height */
+  width: 100vw;            /* 🚨 FIX: Full screen width */
   text-align: center;
   padding: 20px;
-  background: #f8f9fa; /* Soft, clean background */
 }
 
-/* Welcome & Quote Styling */
-h1, h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 70%;
-  line-height: 1.6;
-}
-
-/* Interactive Button */
-button {
-  background: #222;
-  color: white;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  background: #444;
-  transform: translateY(-2px);
-}
-
-/* Navigation Buttons */
-.buttons {
+/* 📌 KEEP CONTENT PERFECTLY CENTERED */
+.content {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  max-width: 800px;
+  width: 100%;
+}
+
+/* 🚨 FIX MOVING BUTTON ON PAGE 1 */
+.button-primary {
+  background: #007bff;
+  color: white;
+  display: block;   /* 🚨 FIX: Ensure button behaves properly */
+  margin: auto;     /* 🚨 FIX: Forces perfect centering */
+  position: relative;
+}
+.button-primary:hover {
+  background: #0056b3;
+}
+
+/* ⏪ FIX NAVIGATION BUTTONS */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
   margin-top: 20px;
 }
-
-.buttons button {
-  background: transparent;
-  color: #222;
-  border: 1px solid #222;
+.nav-buttons button {
+  padding: 10px 20px;
+  font-size: 14px;
 }
 
-.buttons button:hover {
-  background: #222;
-  color: white;
-}
-
-/* Subtle Fade-In Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-
-/* Roses Image */
-.roses-image {
-  width: 180px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-/* Roses Message */
-.roses-text {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #222;
-  text-align: center;
-  margin-top: 5px;
-}
-
-/* Compliment Text */
-.compliment-text {
-  font-size: 1.4rem;
+/* 🖼️ FIX PAGE 2 QUOTE */
+.quote {
+  font-size: 24px;
+  font-style: italic;
   font-weight: 500;
+  margin-bottom: 20px;
   color: #444;
+  max-width: 600px;
   text-align: center;
-  margin-top: 10px;
-  opacity: 0.9;
 }
 
-/* Smooth Fade-In Animation */
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
+/* 🌹 FIX PAGE 4 ROSES */
+.roses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.roses-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c2185b;
+  text-align: center;
+}
+.roses-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 📜 FIX PAGE 5 POEM */
+.poem {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* 📱 FIX MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+  .content {
+    max-width: 90%;
+  }
+  .button {
+    width: 80%;
+    font-size: 14px;
+  }
+  .quote {
+    font-size: 20px;
+  }
+  .poem {
+    font-size: 16px;
+  }
 }
