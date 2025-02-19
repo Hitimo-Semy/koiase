@@ -1,0 +1,110 @@
+/* General Page Styling */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa; /* Soft, clean background */
+}
+
+/* Welcome & Quote Styling */
+h1, h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 70%;
+  line-height: 1.6;
+}
+
+/* Interactive Button */
+button {
+  background: #222;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
+/* Navigation Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buttons button {
+  background: transparent;
+  color: #222;
+  border: 1px solid #222;
+}
+
+.buttons button:hover {
+  background: #222;
+  color: white;
+}
+
+/* Subtle Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+
+/* Roses Image */
+.roses-image {
+  width: 180px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Roses Message */
+.roses-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Compliment Text */
+.compliment-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Smooth Fade-In Animation */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
