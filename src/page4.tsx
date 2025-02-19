@@ -12,7 +12,7 @@ function Page4() {
     >
       {/* Image of Roses */}
       <motion.img 
-        src="/roses.png" 
+        src="./roses.png" 
         alt="Bouquet of red roses" 
         className="roses-image"
         initial={{ opacity: 0, scale: 0.8 }} 
